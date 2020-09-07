@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mnegura.github.io/monsters-rolodex/static/css/main.a8b8af0c.chunk.css",
+    "main.js": "/mnegura.github.io/monsters-rolodex/static/js/main.f783e842.chunk.js",
+    "main.js.map": "/mnegura.github.io/monsters-rolodex/static/js/main.f783e842.chunk.js.map",
+    "runtime-main.js": "/mnegura.github.io/monsters-rolodex/static/js/runtime-main.ce67625b.js",
+    "runtime-main.js.map": "/mnegura.github.io/monsters-rolodex/static/js/runtime-main.ce67625b.js.map",
+    "static/js/2.605ea4c5.chunk.js": "/mnegura.github.io/monsters-rolodex/static/js/2.605ea4c5.chunk.js",
+    "static/js/2.605ea4c5.chunk.js.map": "/mnegura.github.io/monsters-rolodex/static/js/2.605ea4c5.chunk.js.map",
+    "index.html": "/mnegura.github.io/monsters-rolodex/index.html",
+    "precache-manifest.ceb798d0917f6997ba07bc37ce67d473.js": "/mnegura.github.io/monsters-rolodex/precache-manifest.ceb798d0917f6997ba07bc37ce67d473.js",
+    "service-worker.js": "/mnegura.github.io/monsters-rolodex/service-worker.js",
+    "static/css/main.a8b8af0c.chunk.css.map": "/mnegura.github.io/monsters-rolodex/static/css/main.a8b8af0c.chunk.css.map",
+    "static/js/2.605ea4c5.chunk.js.LICENSE.txt": "/mnegura.github.io/monsters-rolodex/static/js/2.605ea4c5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ce67625b.js",
+    "static/js/2.605ea4c5.chunk.js",
+    "static/css/main.a8b8af0c.chunk.css",
+    "static/js/main.f783e842.chunk.js"
+  ]
+}
