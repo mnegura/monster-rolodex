@@ -1,52 +1,37 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import "./App.css";
 import CardList from "./components/card-list/card-list";
 import SearchBox from "./components/search-box/search-box";
 
-class App extends React.Component {
-  constructor() {
-    super();
+function App() {
+  const [monsters, setMonsters] = useState([]);
+  const [searchField, setSearchField] = useState("");
 
-    this.state = {
-      monsters: [],
-      searchField: "",
-    };
-
-    this.handleChange = this.handleChange.bind(this); // memoreaza :3
-  }
-
-  componentDidMount() {
+  // tricky second param, calls useEffect just when the second param is changed
+  useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((users) => this.setState({ monsters: users }));
+    .then((response) => response.json())
+    .then((users) => setMonsters(users));
+  }, []);
+
+  const handleChange = e => {
+    setSearchField(e.target.value);
   }
 
-  handleChange(e) {
-    this.setState({ searchField: e.target.value });
-  }
+  const filteredMonsters = monsters.filter((monster) =>
+    monster.name.toLowerCase().includes(searchField.toLowerCase())
+  );
 
-  // sau 
-  // handleChange = e => {
-  //   this.setState({ searchField: e.target.value });
-  // }
-
-  render() {
-    const { monsters, searchField } = this.state;
-    const filteredMonsters = monsters.filter((monster) =>
-      monster.name.toLowerCase().includes(searchField.toLowerCase())
-    );
-
-    return (
-      <div className="App">
-        <h1>Monster Rolodex</h1>
-        <SearchBox
-          placeholder="Search monsters"
-          handleChange={this.handleChange}
-        />
-        <CardList monsters={filteredMonsters} />
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <h1>Monster Rolodex</h1>
+      <SearchBox
+        placeholder="Search monsters"
+        handleChange={handleChange}
+      />
+      <CardList monsters={filteredMonsters} />
+    </div>
+  );
 }
 
 export default App;
